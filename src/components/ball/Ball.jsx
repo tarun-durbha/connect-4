@@ -1,9 +1,9 @@
 /* eslint-disable */
 import React from "react";
-import RedBall from "../../assets/images/counter-red-large.svg";
-import SmallRedBall from "../../assets/images/counter-red-small.svg";
-import YellowBall from "../../assets/images/counter-yellow-large.svg";
-import SmallYellowBall from "../../assets/images/counter-yellow-small.svg";
+import RedBall from "../../assets/images/POG Computer.svg";
+import SmallRedBall from "../../assets/images/POG Computer.svg";
+import YellowBall from "../../assets/images/POG Player.svg";
+import SmallYellowBall from "../../assets/images/POG Player.svg";
 import { useState, useEffect } from "react";
 
 const Ball = ({ turn, isScreenSmall }) => {

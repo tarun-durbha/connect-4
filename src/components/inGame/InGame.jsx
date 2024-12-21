@@ -6,21 +6,21 @@ import MyVerticallyCenteredModal from "../../components/menu/Menu";
 import { useState, useRef, useEffect } from "react";
 import Ball from "../ball/Ball";
 // ? STYLE IMPORTS
-import Logo from "../../assets/images/logo.svg";
+import Logo from "../../assets/images/Connect 4.svg";
 import BlackBoard from "../../assets/images/board-layer-black-large.svg";
 import SmallBlackBoard from "../../assets/images/board-layer-black-small.svg";
 
 import WhiteBoard from "../../assets/images/board-layer-white-large.svg";
 import SmallWhiteBoard from "../../assets/images/board-layer-white-small.svg";
-import PlayerOne from "../../assets/images/player-one.svg";
-import PlayerTwo from "../../assets/images/player-two.svg";
+import PlayerOne from "../../assets/images/POG Player.svg";
+import PlayerTwo from "../../assets/images/POG Computer.svg";
 import CPU from "../../assets/images/cpu.svg";
-import YellowTurn from "../../assets/images/turn-background-yellow.svg";
-import RedTurn from "../../assets/images/turn-background-red.svg";
+import YellowTurn from "../../assets/images/POG Player.svg";
+import RedTurn from "../../assets/images/POG Computer.svg";
 
 // import RedTurn from "../../assets/images/turn-background-red.svg";
-import YellowMarker from "../../assets/images/marker-yellow.svg";
-import RedMarker from "../../assets/images/marker-red.svg";
+import YellowMarker from "../../assets/images/POG Player.svg";
+import RedMarker from "../../assets/images/POG Computer.svg";
 import Styles from "./InGame.module.scss";
 
 const InGame = () => {
@@ -357,148 +357,6 @@ const InGame = () => {
 
   const updateDisplay = (event) => {
     setMarkerMove({ x: event.clientX, y: event.clientY });
-    //   console.log(markerMove);
-    //   console.log(boardRef.current.offsetLeft);
-
-    //   if (!isScreenSmall) {
-    //     if (
-    //       event.pageX > boardRef.current.offsetLeft - 325 + 15 &&
-    //       event.pageX < boardRef.current.offsetLeft - 325 + 80
-    //     ) {
-    //       setColumn(0);
-    //     } else if (
-    //       event.pageX > boardRef.current.offsetLeft - 325 + 115 &&
-    //       event.pageX < boardRef.current.offsetLeft - 325 + 185
-    //     ) {
-    //       setColumn(1);
-    //     } else if (
-    //       event.pageX > boardRef.current.offsetLeft - 325 + 200 &&
-    //       event.pageX < boardRef.current.offsetLeft - 325 + 270
-    //     ) {
-    //       setColumn(2);
-    //     } else if (
-    //       event.pageX > boardRef.current.offsetLeft - 325 + 290 &&
-    //       event.pageX < boardRef.current.offsetLeft - 325 + 360
-    //     ) {
-    //       setColumn(3);
-    //     } else if (
-    //       event.pageX > boardRef.current.offsetLeft - 325 + 380 &&
-    //       event.pageX < boardRef.current.offsetLeft - 325 + 450
-    //     ) {
-    //       setColumn(4);
-    //     } else if (
-    //       event.pageX > boardRef.current.offsetLeft - 325 + 470 &&
-    //       event.pageX < boardRef.current.offsetLeft - 325 + 540
-    //     ) {
-    //       setColumn(5);
-    //     } else if (
-    //       event.pageX > boardRef.current.offsetLeft - 325 + 560 &&
-    //       event.pageX < boardRef.current.offsetLeft - 325 + 630
-    //     ) {
-    //       setColumn(6);
-    //     }
-
-    //     if (
-    //       event.pageY > boardRef.current.offsetTop - 320 &&
-    //       event.pageY < boardRef.current.offsetTop - 205
-    //     ) {
-    //       setRow(0);
-    //     } else if (
-    //       event.pageY > boardRef.current.offsetTop - 190 &&
-    //       event.pageY < boardRef.current.offsetTop - 120
-    //     ) {
-    //       setRow(1);
-    //     } else if (
-    //       event.pageY > boardRef.current.offsetTop - 100 &&
-    //       event.pageY < boardRef.current.offsetTop - 30
-    //     ) {
-    //       setRow(2);
-    //     } else if (
-    //       event.pageY > boardRef.current.offsetTop - 10 &&
-    //       event.pageY < boardRef.current.offsetTop + 60
-    //     ) {
-    //       setRow(3);
-    //     } else if (
-    //       event.pageY > boardRef.current.offsetTop + 80 &&
-    //       event.pageY < boardRef.current.offsetTop + 150
-    //     ) {
-    //       setRow(4);
-    //     } else if (
-    //       event.pageY > boardRef.current.offsetTop + 170 &&
-    //       event.pageY < boardRef.current.offsetTop + 240
-    //     ) {
-    //       setRow(5);
-    //     }
-    //   } else {
-    //     if (
-    //       event.pageX > boardRef.current.offsetLeft - 325 + 40 &&
-    //       event.pageX < boardRef.current.offsetLeft - 325 + 200
-    //     ) {
-    //       setColumn(0);
-    //     } else if (
-    //       event.pageX > boardRef.current.offsetLeft - 325 + 50 &&
-    //       event.pageX < boardRef.current.offsetLeft - 325 + 250
-    //     ) {
-    //       setColumn(1);
-    //     } else if (
-    //       event.pageX > boardRef.current.offsetLeft - 325 + 60 &&
-    //       event.pageX < boardRef.current.offsetLeft - 325 + 300
-    //     ) {
-    //       setColumn(2);
-    //     } else if (
-    //       event.pageX > boardRef.current.offsetLeft - 325 + 70 &&
-    //       event.pageX < boardRef.current.offsetLeft - 325 + 350
-    //     ) {
-    //       setColumn(3);
-    //     } else if (
-    //       event.pageX > boardRef.current.offsetLeft - 325 + 80 &&
-    //       event.pageX < boardRef.current.offsetLeft - 325 + 400
-    //     ) {
-    //       setColumn(4);
-    //     } else if (
-    //       event.pageX > boardRef.current.offsetLeft - 325 + 90 &&
-    //       event.pageX < boardRef.current.offsetLeft - 325 + 450
-    //     ) {
-    //       setColumn(5);
-    //     } else if (
-    //       event.pageX > boardRef.current.offsetLeft - 325 + 100 &&
-    //       event.pageX < boardRef.current.offsetLeft - 325 + 500
-    //     ) {
-    //       setColumn(6);
-    //     }
-
-    //     if (
-    //       event.pageY > boardRef.current.offsetTop - 320 &&
-    //       event.pageY < boardRef.current.offsetTop - 120
-    //     ) {
-    //       setRow(0);
-    //     } else if (
-    //       event.pageY > boardRef.current.offsetTop - 105 &&
-    //       event.pageY < boardRef.current.offsetTop - 70
-    //     ) {
-    //       setRow(1);
-    //     } else if (
-    //       event.pageY > boardRef.current.offsetTop - 55 &&
-    //       event.pageY < boardRef.current.offsetTop - 20
-    //     ) {
-    //       setRow(2);
-    //     } else if (
-    //       event.pageY > boardRef.current.offsetTop &&
-    //       event.pageY < boardRef.current.offsetTop + 35
-    //     ) {
-    //       setRow(3);
-    //     } else if (
-    //       event.pageY > boardRef.current.offsetTop + 50 &&
-    //       event.pageY < boardRef.current.offsetTop + 85
-    //     ) {
-    //       setRow(4);
-    //     } else if (
-    //       event.pageY > boardRef.current.offsetTop + 100 &&
-    //       event.pageY < boardRef.current.offsetTop + 135
-    //     ) {
-    //       setRow(5);
-    //     }
-    //   }
   };
 
   useEffect(() => {
