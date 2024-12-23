@@ -457,7 +457,7 @@ const InGame = () => {
       />
       <div className={Styles.main}>
         <div className={Styles.playerOne}>
-          <img src={PlayerOne} alt="PlayerOne" />
+          <img src={PlayerTwo} alt="PlayerOne" />
           <p>{!isPlayer ? "YOU" : "PLAYER 1"}</p>
           <h2>{yellowScore}</h2>
         </div>
@@ -568,7 +568,7 @@ const InGame = () => {
           />
         </div>
         <div className={Styles.playerTwo}>
-          <img src={isPlayer ? PlayerTwo : CPU} alt="PlayerTwo" />
+          <img src={isPlayer ? PlayerOne : CPU} alt="PlayerTwo" />
 
           <p>{!isPlayer ? "CPU" : "PLAYER 2"}</p>
 
